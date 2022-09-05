@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           Superpos
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Blacepos/Superpos#readme>
+homepage:       https://github.com/githubuser/Superpos#readme
+bug-reports:    https://github.com/githubuser/Superpos/issues
+author:         Joshua Austin
+maintainer:     austi121@msu.edu
+copyright:      2022 Joshua Austin
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Superpos
+
+library
+  exposed-modules:
+      Superpos
+  other-modules:
+      Paths_Superpos
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , random
+  default-language: Haskell2010
+
+executable Superpos-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Superpos
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Superpos
+    , base >=4.7 && <5
+    , random
+  default-language: Haskell2010
+
+test-suite Superpos-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_Superpos
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Superpos
+    , base >=4.7 && <5
+    , random
+  default-language: Haskell2010
